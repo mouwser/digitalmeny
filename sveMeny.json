@@ -1,0 +1,106 @@
+{
+  "MenuSVE": {
+    "sveItems": [
+      {
+        "name": "FLÄSKFILÉPLANKA",
+        "price": "149 KR",
+        "currency": 149,
+        "description": "Duchessemos, rödvinsås, bearnaise och stekta grönsaker",
+        "type": "pork",
+        "allergies": []
+      },
+      {
+        "name": "BIFF RYDBERG",
+        "price": "175 KR",
+        "currency": 175,
+        "description": "Tärnad oxfilé, potatis och gul lök, serveras med dijonsenapskräm och rå äggula",
+        "type": "beef",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "SPICY CHEESEBURGER",
+        "price": "155 KR",
+        "currency": 155,
+        "description": "180 gram högrevsburgare med sallad, tomat, picklad rödlök, cheddarost med jalapeños och barbecuesås i briochebröd med pommes och rökig ranch-aioli",
+        "type": "beef",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "HALLOUMI BURGARE",
+        "price": "155 KR",
+        "currency": 155,
+        "description": "Sallad, tomat, rödlök och guacamole i briochebröd med pommes och aioli",
+        "type": "vegetarian",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "FISH'N CHIPS",
+        "price": "149 KR",
+        "currency": 149,
+        "description": "\"Beer-batter\" panerad torskrygg med dill-aioli, halstrad citron och pommes",
+        "type": "fish",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "HUSETS SCHNITZEL",
+        "price": "175 KR",
+        "currency": 175,
+        "description": "200 gram välbankad schnitzel \"Borås största\" med citron, kapris, ansjovis, kryddsmör och rödvinssky serveras med stekt potatis",
+        "type": "beef",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "CAESARSALLAD",
+        "price": [
+          {"portion": "HALV", "value": "85 KR"},
+          {"portion": "HEL", "value": "139 KR"}
+        ],
+        "currency": [
+          {"portion": "HALV", "value": 85},
+          {"portion": "HEL", "value": 139}
+        ],
+        "description": "Varm kyckling, bacon, krutonger, parmesan samt ceasardressing",
+        "type": "chicken",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "LAXSALLAD MED QUINOA",
+        "price": "159 KR",
+        "currency": 159,
+        "description": "Grillad lax med quinoa, cocktailtomater, blandsallad, morot julienne, rödlök med en vinägrett",
+        "type": "fish",
+        "allergies": [""]
+      },
+      {
+        "name": "KRÄMIG KYCKLINGPASTA",
+        "price": "169 KR",
+        "currency": 169,
+        "description": "Soltorkade tomater, basilika, grönsaker och parmesan",
+        "type": "chicken",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "MUSSLOR ÀL CAVA",
+        "price": [
+          {"portion": "HALV", "value": "109 KR"},
+          {"portion": "HEL", "value": "189 KR"}
+        ],
+        "currency": [
+          {"portion": "HALV", "value": 109},
+          {"portion": "HEL", "value": 189}
+        ],
+        "description": "Ångkokta musslor i en krämig sås gjord på cava, toppas med creme fraîche och jalapeños, serveras med pommes och aioli",
+        "type": "seafood",
+        "allergies": ["shellfish", "lactose"]
+      },
+      {
+        "name": "GRILLAD OXFILE",
+        "price": "259 KR",
+        "currency": 259,
+        "description": "200 gram oxfilé, rödvinssås, frästa grönsaker serveras med potatisgratäng (går att få med pommes och bearnaise)",
+        "type": "beef",
+        "allergies": ["lactose"]
+      }
+    ]
+  }
+}

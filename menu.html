@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1>Menu</h1>
+    <section class="filters">
+        <div id="meatFilters" class="meatFilters">
+            <p>
+                <label for="filterButton">Filter</label>
+                <button type="button" onclick="resetFilters()">Återställ filter</button>
+            </p>
+            <fieldset>
+                <legend id="filter">Kötträtter</legend>
+                <input type="checkbox" data-filter="vegetarian">
+                <label id="vegetarian" for="vegetarianCheckbox">Vegetarisk</label> <br>
+                <input type="checkbox" data-filter="beef">
+                <label id="beef" for="beefCheckbox">Biff</label> <br>
+                <input type="checkbox" data-filter="chicken">
+                <label id="chicken" for="chickenCheckbox">Kyckling</label> <br>
+                <input type="checkbox" data-filter="pork">
+                <label id="pork" for="porkCheckbox">Fläsk</label> <br>
+                <input type="checkbox" data-filter="fish">
+                <label id="fish" for="fishCheckbox">Fisk</label> <br>
+                <input type="checkbox" data-filter="seafood">
+                <label id="seafood" for="seafoodCheckbox">Skaldjur</label> <br>
+            </fieldset>
+        </div>
+        <div class="allergyFilters">
+            <fieldset>
+                <legend id="allergens">Allergier</legend>
+                <input type="checkbox" data-filter="glutenfree">
+                <label id="glutenfree" for="glutenCheckbox">Glutenfri</label> <br>
+                <input type="checkbox" data-filter="lactosfree">
+                <label id="lactosfree" for="laktosCheckbox">Laktosfri</label> <br>
+            </fieldset>
+        </div>
+
+    <label for="language-select">Select Language:</label>
+    <select id="language-select">
+        <option value="sveMeny.json">Swedish</option>
+        <option value="engMeny.json">English</option>
+    </select>
+
+    <ul id="menu-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

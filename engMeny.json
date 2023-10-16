@@ -1,0 +1,106 @@
+{
+  "MenuENG": {
+    "engItems": [
+      {
+        "name": "PORK TENDERLOIN PLANK STEAK",
+        "price": "149 SEK",
+        "currency": 149,
+        "description": "Duchesse potatoes, a red wine reduction, béarnaise, and fried vegetables",
+        "type": "pork",
+        "allergies": []
+      },
+      {
+        "name": "BIFF RYDBERG",
+        "price": "175 SEK",
+        "currency": 175,
+        "description": "Diced beef tenderloin, potatoes, and onion, served with dijon mustard and raw egg yolk",
+        "type": "beef",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "SPICY CHEESEBURGER",
+        "price": "155 SEK",
+        "currency": 155,
+        "description": "180-gram prime rib burger with lettuce, tomato, pickled red onion, cheddar cheese with jalapeños, and barbecue sauce in brioche bread with fries and smokey ranch aioli",
+        "type": "beef",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "HALLOUMI BURGER",
+        "price": "155 SEK",
+        "currency": 155,
+        "description": "Lettuce, tomato, red onion, and guacamole in brioche bread with fries and aioli",
+        "type": "vegetarian",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "FISH'N CHIPS",
+        "price": "149 SEK",
+        "currency": 149,
+        "description": "\"Beer-batter\" breaded cod loins with dill aioli, seared lemon, and fries",
+        "type": "fish",
+        "allergies": ["gluten", "lactose"]
+      },
+      {
+        "name": "HUSETS SCHNITZEL",
+        "price": "175 SEK",
+        "currency": 175,
+        "description": "200 grams of meat \"Borås biggest\" served with lemon, capers, anchovy, herb butter, and a red wine reduction with fried potatoes",
+        "type": "beef",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "CAESAR SALAD",
+        "price": [
+          {"portion": "HALF", "value": "85 SEK"},
+          {"portion": "FULL", "value": "139 SEK"}
+        ],
+        "currency": [
+          {"portion": "HALF", "value": 85},
+          {"portion": "FULL", "value": 139}
+        ],
+        "description": "Grilled chicken, bacon, croutons, parmesan, and Caesar dressing",
+        "type": "chicken",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "SALMON SALAD WITH QUINOA",
+        "price": "159 SEK",
+        "currency": 159,
+        "description": "Grilled salmon with quinoa, cocktail tomatoes, julienne carrot, mixed salad, red onion with vinaigrette",
+        "type": "fish",
+        "allergies": [""]
+      },
+      {
+        "name": "CREAMY CHICKEN PASTA",
+        "price": "169 SEK",
+        "currency": 169,
+        "description": "Sundried tomatoes, basil, vegetables, and parmesan",
+        "type": "chicken",
+        "allergies": ["lactose"]
+      },
+      {
+        "name": "MUSSELS ÁL CAVA",
+        "price": [
+          {"portion": "HALF", "value": "109 SEK"},
+          {"portion": "WHOLE", "value": "189 SEK"}
+        ],
+        "currency": [
+          {"portion": "HALF", "value": 109},
+          {"portion": "WHOLE", "value": 189}
+        ],
+        "description": "Steamed mussels in a creamy cava sauce, topped with cream fraîche and jalapeños, served with fries and aioli",
+        "type": "seafood",
+        "allergies": ["shellfish", "lactose"]
+      },
+      {
+        "name": "GRILLED BEEF TENDERLOIN",
+        "price": "259 SEK",
+        "currency": 259,
+        "description": "200 grams beef tenderloin, red wine reduction, fried vegetables, and potato gratin (possible with fries and béarnaise)",
+        "type": "beef",
+        "allergies": ["lactose"]
+      }
+    ]
+  }
+}
