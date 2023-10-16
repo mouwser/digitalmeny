@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Duck</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div class="totalcontent">
+    <div class="grid-header">
+        <a href="index.html"><img id="logo"src="/bilder/lucky_duck.png" alt="bild på lucky duck logo"></a>
+        <h1 id="header">Lucky Duck Cafe & Bar</h1>
+        <img id="svensk" src="bilder/svenska.png" alt="svensk flagga för svensk meny">
+        <img id="engelsk" src="bilder/engelska.png" alt="engelsk flagga för engelsk meny">
+        
+    
+    </div>
+    
+    <div class="grid-meny">
+        <p>menu</p>
+
+    </div>
+
+    <div class="grid-filter">
+        <div class="meatFilters">
+            <p>
+                <label for="filterButton">Filter</label>
+                <button type="button" onclick="resetFilters()">Återställ filter</button>
+            </p>
+            <fieldset>
+                <legend>Kötträtter</legend>
+                <input type="checkbox" data-filter="vegetarian">
+                <label for="vegetarianCheckbox">Vegetarisk</label> <br>
+                <input type="checkbox" data-filter="beef">
+                <label for="beefCheckbox">Biff</label> <br>
+                <input type="checkbox" data-filter="chicken">
+                <label for="chickenCheckbox">Kyckling</label> <br>
+                <input type="checkbox" data-filter="pork">
+                <label for="porkCheckbox">Fläsk</label> <br>
+                <input type="checkbox" data-filter="fish">
+                <label for="fishCheckbox">Fisk</label> <br>
+            </fieldset>
+        </div>
+        <div class="allergyFilters">
+            <fieldset>
+                <legend>Allergier</legend>
+                <input type="checkbox" data-filter="glutenfree">
+                <label for="glutenCheckbox">Glutenfri</label> <br>
+                <input type="checkbox" data-filter="lactosfree">
+                <label for="laktosCheckbox">Laktosfri</label> <br>
+            </fieldset>
+        </div>
+        <div>
+            <label for="priceOrder">Sortera pris</label><br>
+            <select class="priceOrder">
+                <option value="standard">Standard</option>
+                <option value="lowToHigh">Stigande</option>
+                <option value="highToLow">Fallande</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="grid-footer">
+        <p>Ankvägen 21, norra Ankstaden </p>
+
+
+    </div>
+</div>
+</body>
+</html>
