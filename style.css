@@ -1,0 +1,80 @@
+ body {
+     background-color: rgb(254, 233, 208);
+     font-family: Arial, Helvetica, sans-serif;
+     color: #000;
+     font-size: 10px;
+     line-height: 1;
+     margin: 0;
+     padding: 0;
+ }
+
+ h1 {
+     margin: 0;
+     text-align: center;
+     background-color: rgb(186, 184, 184);
+     font-size: 60px;
+ }
+
+ .product {
+     display: flex;
+     align-items: center;
+ }
+
+ .title {
+     flex: 0.2;
+     white-space: nowrap;
+     font-size: large;
+     font-weight: bold;
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ .line {
+     flex-grow: 1;
+     height: 1px;
+     background-color: #000;
+     margin-top: 1px;
+     margin-bottom: 1px;
+ }
+
+ .food-menu {
+     width: 100%;
+     
+ }
+
+ .price {
+     text-align: end;
+     font-size: 18px;
+ }
+
+ footer {
+     margin: 0;
+     background-color: rgb(186, 184, 184);
+     font-size: 30px;
+     text-align: center;
+     bottom: 0px;
+     width: 100%;
+     position: absolute;
+ }
+
+ /* Anpassar designen för mindre skärmar */
+ @media (max-width: 768px) {
+     .main-menu {
+         width: 100%;
+     }
+
+     .column {
+         width: 100%;
+     }
+ }
+
+ /* Anpassar designen för mobila enheter */
+ @media (max-width: 480px) {
+     .main-menu {
+         font-size: 16px;
+     }
+ }
