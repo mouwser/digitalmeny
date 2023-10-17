@@ -8,7 +8,7 @@ function loadMenu(selectedLanguage) {
   fetch(languageFile)
     .then((res) => res.json())
     .then((menuData) => {
-      const menuList = document.getElementById("menu-list");
+      const menuList = document.getElementById("menuList");
       const filters = document.getElementById("meatFilters");
       menuList.innerHTML = ""; // rensa nuvarande meny
       let menuItems = [];
@@ -43,13 +43,13 @@ function loadMenu(selectedLanguage) {
 
 // ändra språk
 function changeLanguage() {
-  const selectedLanguage = document.getElementById("language-select").value;
+  const selectedLanguage = document.getElementById("languageSelect").value;
   loadMenu(selectedLanguage);
 }
 
 // lyssna på ändring av språk
 document
-  .getElementById("language-select")
+  .getElementById("languageSelect")
   .addEventListener("change", changeLanguage);
 
 // ladda menyn vid sidans start (svensk standard)
