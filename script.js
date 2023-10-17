@@ -48,9 +48,8 @@ function changeLanguage() {
 }
 
 // lyssna på ändring av språk
-document
-  .getElementById("languageSelect")
-  .addEventListener("change", changeLanguage);
+document.getElementById("languageSelect")
+document.addEventListener("change", changeLanguage);
 
 // ladda menyn vid sidans start (svensk standard)
 loadMenu("sveMeny.json");
