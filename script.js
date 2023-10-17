@@ -1,4 +1,3 @@
-const products = document.querySelectorAll('.column');
 const sortSelect = document.getElementById('sort-elemenet');
 
 sortSelect.addEventListener('change', () => {
