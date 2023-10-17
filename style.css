@@ -43,7 +43,7 @@
 
  .food-menu {
      width: 100%;
-     
+     /*  border: solid black;*/
  }
 
  .price {
@@ -52,13 +52,12 @@
  }
 
  footer {
-     margin: 0;
      background-color: rgb(186, 184, 184);
-     font-size: 30px;
+     padding: 20px 0 20px 0;
      text-align: center;
-     bottom: 0px;
-     width: 100%;
      position: absolute;
+     bottom: 0;
+     width: 100%;
  }
 
  /* Anpassar designen för mindre skärmar */
@@ -70,6 +69,14 @@
      .column {
          width: 100%;
      }
+     footer {
+        background-color: rgb(186, 184, 184);
+        padding: 20px 0 20px 0;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
  }
 
  /* Anpassar designen för mobila enheter */
