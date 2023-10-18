@@ -2,7 +2,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+
 }
+
+
 
 .totalcontent{
     display: grid;
@@ -12,10 +17,10 @@ html, body {
       "header header"
       "sidebar content"
       "footer footer";
-    height: 100vh;
+    
     
   }
-
+ 
 
 .grid-header{
     grid-area: header;
@@ -37,7 +42,11 @@ html, body {
   background-color: #555;
   color: #fff;
   padding: 10px;
- 
+  display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    grid-gap: 20px;
+    align-content: start;
 }
 
 .grid-footer{
@@ -52,7 +61,7 @@ html, body {
     text-align: center;
     font-size: 50px;
     font-style: italic;
-    font-family: cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: lighter;
     margin-right: 200px;
     
@@ -71,3 +80,77 @@ html, body {
     float: right;
 }
 
+#menu-list {
+  grid-auto-flow: column;
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#menu-list article {
+  display: grid;
+  grid-template-columns: 1fr 50px 30px 50px 30px;
+  padding: 20px;
+  border-radius: 3px;
+  border: 2px solid #555;
+  box-shadow: 1px 1px 5px 2px #555;
+  background-color: azure;
+}
+#menu-list article dish_id {
+  display: none;
+  }
+  #menu-list article description {
+      grid-column: 1 / -1;
+  }
+  #menu-list article .order-button {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      width: 70px;
+      justify-self: center;
+  }
+  fieldset {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+  }
+  .hidden {
+    display: none !important; 
+
+  }
+/* Anpassar designen för mindre skärmar */
+@media (max-width: 768px) {
+  .main-menu {
+      width: 100%;
+  }
+
+  .column {
+      width: 100%;
+  }
+  footer {
+     background-color: rgb(186, 184, 184);
+     padding: 20px 0 20px 0;
+     text-align: center;
+     position: relative;
+     bottom: 0;
+     width: 100%;
+ }
+}
+
+/* Anpassar designen för mobila enheter */
+@media (max-width: 480px) {
+  .main-menu {
+      font-size: 16px;
+  }
+  #menu-list {
+    grid-auto-flow: row;
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  
+}
