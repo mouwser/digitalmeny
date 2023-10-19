@@ -16,20 +16,19 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="totalcontent">
     <div class="grid-header">
-        <a href="index.html"><img id="logo"src="/bilder/lucky_duck.png" alt="bild på lucky duck logo"></a>
+        
         <h1 id="header">Lucky Duck Cafe & Bar</h1>
         
-        
         <section class="languages">
-           <button type="button" id="svensk-button">
+            <label for="language-select">Select Language:</label>
+            <button class="svenskbutton" type="button" id="svensk-button">
                     <img src="bilder/svenska.png" alt="svensk flagga för svensk meny">
                   </button> 
-           <button type="button" id="engelsk-button">
+           <button class="engelskbutton" type="button" id="engelsk-button">
             <img src="bilder/engelska.png" alt="engelsk flagga för engelsk meny">
                     </button>
-            <label for="language-select">Select Language:</label>
-                  <select id="language-select">
-                  
+            
+                 
                 
             </select>
         </section>
@@ -46,43 +45,46 @@
 
     <div class="grid-filter">
         <aside class="filters">
-        <div class="meatFilters">
+            <img id="logo"src="/bilder/lucky_duck.png" alt="bild på lucky duck logo">
+            <div class="meatFilters">
             <p>
                 <label for="filterButton">Filter</label>
-                <button type="button" onclick="resetFilters()">Återställ filter</button>
+                <button id="reset" type="button" onclick="resetFilters()">Återställ filter</button>
             </p>
             <fieldset>
-                <legend>Kötträtter</legend>
+                <legend id="filter">Kötträtter</legend>
                 <input type="checkbox" data-filter="vegetarian">
-                <label for="vegetarianCheckbox">Vegetarisk</label> 
+                <label id="vegetarian" for="vegetarianCheckbox">Vegetarisk</label> 
                 <input type="checkbox" data-filter="beef">
-                <label for="beefCheckbox">Biff</label> 
+                <label id="beef" for="beefCheckbox">Nötkött</label>
                 <input type="checkbox" data-filter="chicken">
-                <label for="chickenCheckbox">Kyckling</label> 
+                <label id="chicken" for="chickenCheckbox">Kyckling</label> 
                 <input type="checkbox" data-filter="pork">
-                <label for="porkCheckbox">Fläsk</label> 
+                <label id="pork" for="porkCheckbox">Fläsk</label> 
                 <input type="checkbox" data-filter="fish">
-                <label for="fishCheckbox">Fisk</label> 
+                <label id="fish" for="fishCheckbox">Fisk</label> 
+                <input type="checkbox" data-filter="seafood">
+                <label id="seafood" for="seafoodCheckbox">Skaldjur</label> 
             </fieldset>
-        </div>
-        <div class="allergyFilters">
+            </div>
+            <div class="allergyFilters">
             <fieldset>
-                <legend>Allergier</legend>
+                <legend id="allergens">Allergier</legend>
                 <input type="checkbox" data-filter="gluten">
-                <label for="glutenCheckbox">Glutenfri</label> 
+                <label id="glutenfree" for="glutenCheckbox">Glutenfri</label> 
                 <input type="checkbox" data-filter="lactose">
-                <label for="laktosCheckbox">Laktosfri</label> 
+                <label id="lactosfree" for="laktosCheckbox">Laktosfri</label> 
             </fieldset>
-        </div>
-        <div>
-            <label for="priceOrder">Sortera pris</label><br>
+            </div>
+            <div>
+            <label id="priceorder" for="priceOrder">Sortera pris</label><br>
             <select class="priceOrder" id="sort-element">
-                <option value="standard">Standard</option>
-                <option value="lowToHigh">Stigande</option>
-                <option value="highToLow">Fallande</option>
+                <option id="standard" value="standard">Standard</option>
+                <option id="lowtohigh" value="lowToHigh">Stigande</option>
+                <option id="hightolow" value="highToLow">Fallande</option>
             </select>
-        </div>
-    </aside>
+            </div>
+        </aside>
     </div>
 
     <div class="grid-footer">

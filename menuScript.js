@@ -14,8 +14,12 @@ function loadMenu(selectedLanguage) {
   
         if (selectedLanguage === "sveMeny.json") {
           menuItems = menuData.MenuSVE.sveItems;
+          swedishFilter();
+          
         } else {
           menuItems = menuData.MenuENG.engItems;
+          englishFilter();
+         
         }
   
         // skapa HTML-element för alla rätterna i menyn, oavsett språk
@@ -30,8 +34,8 @@ function loadMenu(selectedLanguage) {
                 <currency>${item.currency}</currency>
                 <price>${item.price[0]}</price>
                 <currency>${item.currency}</currency>
-                <button class="order-button" data-item-id="${item.name}">Order</button>
                 <description>${item.description}</description>
+                <button class="order-button" data-item-id="${item.name}">Order</button>
                 `;
               menuList.appendChild(menuItem);
             }
@@ -39,12 +43,11 @@ function loadMenu(selectedLanguage) {
               menuItem.innerHTML = `
                 <dish_id>${item.id}</dish_id> 
                 <name>${item.name}</name>
-                <halfprice></halfprice>
-                <currency></currency>
+                
                 <price>${item.price[0]}</price>
                 <currency>${item.currency}</currency>
-                <button class="order-button" data-item-id="${item.name}">Order</button>
                 <description>${item.description}</description>
+                <button class="order-button" data-item-id="${item.name}">Order</button>
                 `;
               menuList.appendChild(menuItem);
             }
@@ -54,13 +57,56 @@ function loadMenu(selectedLanguage) {
   }
   
   // ändra språk
-  function changeLanguage() {
-    const selectedLanguage = document.getElementById("language-select").value;
-    loadMenu(selectedLanguage);
-  }
+  const menuContent = document.getElementById('menu-content');
+  const svenskButton = document.getElementById('svensk-button');
+  const engelskButton = document.getElementById('engelsk-button');
   
-  // lyssna på ändring av språk
-  document.getElementById("svensk-button").addEventListener("click", changeLanguage);
-  document.getElementById("engelsk-button").addEventListener("click",changeLanguage)
+ 
+  //byter språk på menyn
+  svenskButton.addEventListener('click', () => {
+    currentLanguage = 'sveMeny.json';
+    loadMenu(currentLanguage);
+  });
+  
+  engelskButton.addEventListener('click', () => {
+    currentLanguage = 'engMeny.json';
+    loadMenu(currentLanguage);
+  });
   // ladda menyn vid sidans start (svensk standard)
   loadMenu("sveMeny.json");
+
+  function swedishFilter() {
+    document.getElementById("filter").textContent = "Kötträtter";
+    document.getElementById("vegetarian").textContent = "Vegetarisk";
+    document.getElementById("beef").textContent = "Nötkött";
+    document.getElementById("chicken").textContent = "Kyckling";
+    document.getElementById("pork").textContent = "Fläsk";
+    document.getElementById("fish").textContent = "Fisk";
+    document.getElementById("seafood").textContent = "Skaldjur";
+    document.getElementById("allergens").textContent = "Allergier";
+    document.getElementById("glutenfree").textContent = "Glutenfri";
+    document.getElementById("lactosfree").textContent = "Laktosfri";
+    document.getElementById("lowtohigh").textContent = "stigande";
+    document.getElementById("hightolow").textContent = "fallande";
+    document.getElementById("priceorder").textContent= "Sortera pris";
+  }
+  
+  function englishFilter() {
+    document.getElementById("filter").textContent = "Meat Dishes";
+    document.getElementById("vegetarian").textContent = "Vegetarian";
+    document.getElementById("beef").textContent = "Beef";
+    document.getElementById("chicken").textContent = "Chicken";
+    document.getElementById("pork").textContent = "Pork";
+    document.getElementById("fish").textContent = "Fish";
+    document.getElementById("seafood").textContent = "Seafood";
+    document.getElementById("allergens").textContent = "Allergies";
+    document.getElementById("glutenfree").textContent = "Gluten free";
+    document.getElementById("lactosfree").textContent = "Lactose free";
+    document.getElementById("lowtohigh").textContent = "low to high";
+    document.getElementById("hightolow").textContent = "high to low";
+    document.getElementById("priceorder").textContent= "price order";
+    document.getElementById("reset").textContent= "reset filter";
+  }
+
+  
+ 
