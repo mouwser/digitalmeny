@@ -65,7 +65,18 @@ html, body {
     align-content: start;   
 }
 .filters{
-  position:fixed;
+  position:relative;
+}
+.orderCart {    
+  border: 2px solid #000;  
+  padding: 10px;
+  display: flex;     
+  flex-direction: column;     
+  align-items: center; 
+} 
+.orderCart header h2 {     
+  text-align: center;     
+  margin-top: 0;  
 }
 
 .grid-footer{
@@ -81,14 +92,8 @@ html, body {
     font-size: 50px;
     font-style: italic;
     font-family: 'Dancing Script', cursive;
-    font-weight: lighter;
-    
-    
-    
+    font-weight: lighter;    
 }
-
-
-
 
 #menu-list {
   grid-auto-flow: column;
@@ -131,7 +136,7 @@ html, body {
 
   }
 
-/* Anpassar designen för mobila enheter */
+/* Anpassar designen för mobila enheter*/ 
 @media (max-width: 1600px) {
   #menu-list{
       grid-auto-flow: row;
@@ -145,10 +150,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 3fr; 
   grid-template-rows: auto 1fr auto; 
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
+  
   }
   #menu-list article {
     width: 100%;
@@ -161,7 +163,7 @@ html, body {
     align-self: end;
 }
 .grid-filter{
- font-size: 2em;
+ font-size: 1em;
  width: auto;
  align-items: stretch;
 
@@ -270,6 +272,7 @@ grid-template-areas:
   box-sizing: border-box;
   grid-template-columns: 1fr;
   
+  
 }
 #menu-list article .order-button {
   margin:auto;
@@ -284,8 +287,6 @@ font-size: 1em;
 
 
 }
-html, body{
-  height: 1000px;
-}
+
 
 }

@@ -30,26 +30,26 @@ function filterMenu() {
       }
     
       // Array för att lagra valda värden för allergifilter
-      let allergenFree_array = [];
+      let allergenDishes_array = [];
   
       // Iterera genom allergifilter och lagra valda värden
       for( const input of allergyFilters )
       {
         if( input.checked )
         {
-          allergenFree_array.push( input.dataset.filter );
+          allergenDishes_array.push( input.dataset.filter );
         }
       }
          
       // Om inga filter är valda, visa menyobjektet
-      if( meat_array.length === 0 && allergenFree_array.length === 0)
+      if( meat_array.length === 0 && allergenDishes_array.length === 0)
       {
         menuItem.classList.remove("hidden");
         return;
       }
      
       // Om endast allergifilter är valda
-      if( meat_array.length === 0 && allergenFree_array.length !== 0)
+      if( meat_array.length === 0 && allergenDishes_array.length !== 0)
       {
         //skapar const rawFilter och hämtar data-filter från dish under article i base64 format 
         const rawFilter = menuItem.dataset.filter;
@@ -59,9 +59,9 @@ function filterMenu() {
         const filter = JSON.parse(stringFilter);
     
         // Kontrollera om menyobjektet är allergivänligt och visa/dölj därefter
-        for( const allergenFree of allergenFree_array )
+        for( const allergenFree of allergenDishes_array )
         {
-          if( !filter.allergenFriendly.includes( allergenFree ) )
+          if( filter.allergenUnfriendly.includes( allergenFree ) )
           {
             return;
           }
@@ -87,8 +87,8 @@ function filterMenu() {
      });
          
      // Kontrollera allergifilter och visa rätter med den typen av allergi
-     allergenFree_array.forEach( function( allergenFree ) {
-       if( !filter.allergenFriendly.includes( allergenFree ) )
+     allergenDishes_array.forEach( function( allergenFree ) {
+       if( filter.allergenUnfriendly.includes( allergenFree ) )
       {
         menuItem.classList.add("hidden");
         return;
@@ -162,4 +162,94 @@ function filterMenu() {
   }
   });
   
-  
+  // array för kundvagn som laddas från localStorage
+const orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
+
+// funktion för att lägga till rätt och pris till kundvagn
+function addToOrder(dishName, dishPrice, currency) {
+  orderItems.push({ name: dishName, price: dishPrice, currency: "SEK" });
+
+  updateOrderDisplay();
+  saveToLocalStorage();
+}
+
+// funktion som uppdaterar kundvagn
+function updateOrderDisplay() {
+  const orderDiv = document.getElementById("order-div");
+  orderDiv.innerHTML = ""; 
+
+  let totalPrice = 0;
+
+  orderItems.forEach((item, index) => {
+    const orderItem = document.createElement("div");
+    orderItem.textContent = `${item.name}: ${item.price} ${item.currency}`;
+
+    // skapar en removeButton
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "X";
+    removeButton.style.color = "red";
+    removeButton.addEventListener("click", () => removeItem(index));
+
+    orderItem.appendChild(removeButton);
+    orderDiv.appendChild(orderItem);
+
+    totalPrice += item.price;
+  });
+  // visar det totala priset
+  const totalDiv = document.createElement("div");
+  totalDiv.textContent = `Total: ${totalPrice} ${orderItems.length > 0 ? orderItems[0].currency : 'SEK'}`;
+  orderDiv.appendChild(totalDiv);
+  if (orderItems.length > 0) {
+    const checkoutButton = document.createElement("button");
+    checkoutButton.textContent = "Beställ";
+    checkoutButton.addEventListener("click", openCheckoutPage);
+    orderDiv.appendChild(checkoutButton);
+  }
+}
+function openCheckoutPage() {
+  // skapa en ny HTML-sida
+  const checkoutPage = window.open('', '_blank');
+
+  // skapa en tabell för att visa beställningsinformationen
+  const table = document.createElement('table');
+  const headerRow = table.insertRow();
+  const nameHeader = document.createElement('th');
+  const priceHeader = document.createElement('th');
+  nameHeader.textContent = 'Dish Name';
+  priceHeader.textContent = 'Price';
+  headerRow.appendChild(nameHeader);
+  headerRow.appendChild(priceHeader);
+
+  // fyll i tabellen med beställningsinformationen
+  orderItems.forEach(item => {
+    const row = table.insertRow();
+    const nameCell = row.insertCell();
+    const priceCell = row.insertCell();
+    nameCell.textContent = item.name;
+    priceCell.textContent = `${item.price} ${item.currency}`;
+  });
+
+  // lägg till tabellen på den nya sidan
+  checkoutPage.document.body.appendChild(table);
+}
+
+// ... (your existing code)
+
+// funktion som körs när beställningsknappen klickas på
+function onCheckoutButtonClick() {
+  openCheckoutPage();
+}
+
+// Tar bort maträtten från kundvagnen
+function removeItem(index) {
+
+  orderItems.splice(index, 1);
+  updateOrderDisplay();
+  saveToLocalStorage();
+}
+// Sparar kundvagnen i localStorage
+function saveToLocalStorage() {
+  localStorage.setItem('orderItems', JSON.stringify(orderItems));
+}
+
+updateOrderDisplay();

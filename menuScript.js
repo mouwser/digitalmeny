@@ -25,7 +25,7 @@ function loadMenu(selectedLanguage) {
         // skapa HTML-element för alla rätterna i menyn, oavsett språk
         menuItems.forEach(item => {
           const menuItem = document.createElement("article");
-          menuItem.dataset.filter = btoa( '{"price": '+JSON.stringify(item.price)+',"meat": ["'+item.type+'"], "allergenFriendly": '+JSON.stringify(item.allergies)+' }');
+          menuItem.dataset.filter = btoa( '{"price": '+JSON.stringify(item.price)+',"meat": ["'+item.type+'"], "allergenUnfriendly": '+JSON.stringify(item.allergies)+' }');
             if (item.price.length > 1) {
                menuItem.innerHTML = `
                 <dish_id>${item.id}</dish_id> 
@@ -35,7 +35,7 @@ function loadMenu(selectedLanguage) {
                 <price>${item.price[0]}</price>
                 <currency>${item.currency}</currency>
                 <description>${item.description}</description>
-                <button class="order-button" data-item-id="${item.name}">Order</button>
+                <button class="order-button" data-dish_id="${item.id}" onclick="addToOrder('${item.name}', ${item.price[0]}, '${item.currency}')">Order</button>
                 `;
               menuList.appendChild(menuItem);
             }
@@ -47,7 +47,7 @@ function loadMenu(selectedLanguage) {
                 <price>${item.price[0]}</price>
                 <currency>${item.currency}</currency>
                 <description>${item.description}</description>
-                <button class="order-button" data-item-id="${item.name}">Order</button>
+                <button class="order-button" data-dish_id="${item.id}" onclick="addToOrder('${item.name}', ${item.price[0]}, '${item.currency}')">Order</button>
                 `;
               menuList.appendChild(menuItem);
             }

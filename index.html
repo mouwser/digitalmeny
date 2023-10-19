@@ -45,7 +45,7 @@
 
     <div class="grid-filter">
         <aside class="filters">
-            <img id="logo"src="/bilder/lucky_duck.png" alt="bild på lucky duck logo">
+            <img src="/bilder/lucky_duck.png" alt="bild på lucky duck logo">
             <div class="meatFilters">
             <p>
                 <label for="filterButton">Filter</label>
@@ -53,36 +53,40 @@
             </p>
             <fieldset>
                 <legend id="filter">Kötträtter</legend>
-                <input type="checkbox" data-filter="vegetarian">
+                <input id="vegetarianCheckbox" type="checkbox" data-filter="vegetarian">
                 <label id="vegetarian" for="vegetarianCheckbox">Vegetarisk</label> 
-                <input type="checkbox" data-filter="beef">
+                <input id="beefCheckbox" type="checkbox" data-filter="beef">
                 <label id="beef" for="beefCheckbox">Nötkött</label>
-                <input type="checkbox" data-filter="chicken">
+                <input id="chickenCheckbox" type="checkbox" data-filter="chicken">
                 <label id="chicken" for="chickenCheckbox">Kyckling</label> 
-                <input type="checkbox" data-filter="pork">
+                <input id="porkCheckbox" type="checkbox" data-filter="pork">
                 <label id="pork" for="porkCheckbox">Fläsk</label> 
-                <input type="checkbox" data-filter="fish">
+                <input id="fishCheckbox" type="checkbox" data-filter="fish">
                 <label id="fish" for="fishCheckbox">Fisk</label> 
-                <input type="checkbox" data-filter="seafood">
+                <input id="seafoodCheckbox" type="checkbox" data-filter="seafood">
                 <label id="seafood" for="seafoodCheckbox">Skaldjur</label> 
             </fieldset>
             </div>
             <div class="allergyFilters">
             <fieldset>
                 <legend id="allergens">Allergier</legend>
-                <input type="checkbox" data-filter="gluten">
+                <input id="glutenCheckbox" type="checkbox" data-filter="gluten">
                 <label id="glutenfree" for="glutenCheckbox">Glutenfri</label> 
-                <input type="checkbox" data-filter="lactose">
+                <input id="laktosCheckbox" type="checkbox" data-filter="lactose">
                 <label id="lactosfree" for="laktosCheckbox">Laktosfri</label> 
             </fieldset>
             </div>
             <div>
-            <label id="priceorder" for="priceOrder">Sortera pris</label><br>
-            <select class="priceOrder" id="sort-element">
+            <label id="priceorder" for="priceOrder">Sortera pris<br>
+            <select title="sortera pris" class="priceOrder" id="sort-element">
                 <option id="standard" value="standard">Standard</option>
                 <option id="lowtohigh" value="lowToHigh">Stigande</option>
                 <option id="hightolow" value="highToLow">Fallande</option>
             </select>
+            </label>
+            </div>
+            <div id="order-div">
+                
             </div>
         </aside>
     </div>
