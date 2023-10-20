@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="totalcontent">
+        <header class="grid-header">
+            <h1 id="header">Lucky Duck Cafe & Bar</h1>
+            
+            <section class="languages">
+                <label for="language-select"></label>
+                <button class="svenskbutton" type="button" id="svensk-button">
+                        <img src="bilder/svenska.png" alt="svensk flagga för svensk meny">
+                      </button> 
+               <button class="engelskbutton" type="button" id="engelsk-button">
+                <img src="bilder/engelska.png" alt="engelsk flagga för engelsk meny">
+                        </button>
+
+
+                </select>
+            </section>
+        </header>
+        
+        <aside class="grid-filter">
+            <div class="filters">
+                <img id="logo" src="/bilder/lucky_duck.png" alt="bild på lucky duck logo">
+                <div class="meatFilters">
+                    <p>
+                        <label for="filterButton"></label>
+                        <button id="reset" type="button" onclick="resetFilters()">Återställ filter</button>
+                    </p>
+                    <fieldset>
+                        <legend id="filter">Kötträtter</legend>
+                        <input id="vegetarianCheckbox" type="checkbox" data-filter="vegetarian">
+                        <label id="vegetarian" for="vegetarianCheckbox">Vegetarisk</label>
+                        <input id="beefCheckbox" type="checkbox" data-filter="beef">
+                        <label id="beef" for="beefCheckbox">Nötkött</label>
+                        <input id="chickenCheckbox" type="checkbox" data-filter="chicken">
+                        <label id="chicken" for="chickenCheckbox">Kyckling</label>
+                        <input id="porkCheckbox" type="checkbox" data-filter="pork">
+                        <label id="pork" for="porkCheckbox">Fläsk</label>
+                        <input id="fishCheckbox" type="checkbox" data-filter="fish">
+                        <label id="fish" for="fishCheckbox">Fisk</label>
+                        <input id="seafoodCheckbox" type="checkbox" data-filter="seafood">
+                        <label id="seafood" for="seafoodCheckbox">Skaldjur</label>
+                    </fieldset>
+                </div>
+                <div class="allergyFilters">
+                    <fieldset>
+                        <legend id="allergens">Allergier</legend>
+                        <input id="glutenCheckbox" type="checkbox" data-filter="gluten">
+                        <label id="glutenfree" for="glutenCheckbox">Glutenfri</label>
+                        <input id="laktosCheckbox" type="checkbox" data-filter="lactose">
+                        <label id="lactosfree" for="laktosCheckbox">Laktosfri</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <div>
+                        <label for="sort-element" id="priceorder"></label>
+                        <select title="sortera pris" class="priceOrder" id="sort-element">
+                            <option id="standard" value="standard">Standard</option>
+                            <option id="lowtohigh" value="lowToHigh">Stigande</option>
+                            <option id="hightolow" value="highToLow">Fallande</option>
+                        </select>
+                    </div>
+                <section class="orderCart">
+                    <header>
+                        <h2>Checkout</h2>
+                    </header>
+                    <div id="order-div"></div>
+                </section>
+            </div>
+            <!-- språk -->
+            
+        </aside>
+        <!-- Menu List -->
+        <section id="menu-list" class="grid-meny"></section>
+        <footer class="grid-footer">
+            <p>&copy; 2023 Lucky Duck</p>
+            <p>Ankvägen 35</p>
+            <p>345 67 Ankstaden</p>
+        </footer>
+    </div>
+
+    <script src="menuScript.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

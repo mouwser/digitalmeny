@@ -1,0 +1,105 @@
+{
+    "MenuENG": {
+      "engItems": [
+        {
+          "id": 1,
+          "name": "PORK TENDERLOIN PLANK STEAK",
+          "price": [149],
+          "currency": "SEK",
+          "description": "Duchesse potatoes, a red wine reduction, béarnaise, and fried vegetables",
+          "type": "pork",
+          "allergies": []
+        },
+        {
+          "id": 2,
+          "name": "BEEF RYDBERG",
+          "price": [175],
+          "currency": "SEK",
+          "description": "Diced beef tenderloin, potatoes, and onion, served with dijon mustard and raw egg yolk",
+          "type": "beef",
+          "allergies": ["gluten", "lactose"]
+        },
+        {
+          "id": 3,
+          "name": "SPICY CHEESEBURGER",
+          "price": [155],
+          "currency": "SEK",
+          "description": "180-gram prime rib burger with lettuce, tomato, pickled red onion, cheddar cheese with jalapeños, and barbecue sauce in brioche bread with fries and smokey ranch aioli",
+          "type": "beef",
+          "allergies": ["gluten", "lactose"]
+        },
+        {
+          "id": 4,
+          "name": "HALLOUMI BURGER",
+          "price": [155],
+          "currency": "SEK",
+          "description": "Lettuce, tomato, red onion, and guacamole in brioche bread with fries and aioli",
+          "type": "vegetarian",
+          "allergies": ["lactose"]
+        },
+        {
+          "id": 5,
+          "name": "FISH'N CHIPS",
+          "price": [149],
+          "currency": "SEK",
+          "description": "\"Beer-batter\" breaded cod loins with dill aioli, seared lemon, and fries",
+          "type": "fish",
+          "allergies": ["gluten", "lactose"]
+        },
+        {
+          "id": 6,
+          "name": "HUSETS SCHNITZEL",
+          "price": [175],
+          "currency": "SEK",
+          "description": "200 grams of meat \"Borås biggest\" served with lemon, capers, anchovy, herb butter, and a red wine reduction with fried potatoes",
+          "type": "beef",
+          "allergies": ["lactose"]
+        },
+        {
+          "id": 7,
+          "name": "CAESAR SALAD",
+          "price": [139,85],
+          "currency": "SEK",
+          "description": "Grilled chicken, bacon, croutons, parmesan, and Caesar dressing",
+          "type": "chicken",
+          "allergies": ["lactose"]
+        },
+        {
+          "id": 8,
+          "name": "SALMON SALAD WITH QUINOA",
+          "price": [159],
+          "currency": "SEK",
+          "description": "Grilled salmon with quinoa, cocktail tomatoes, julienne carrot, mixed salad, red onion with vinaigrette",
+          "type": "fish",
+          "allergies": [""]
+        },
+        {
+          "id": 9,
+          "name": "CREAMY CHICKEN PASTA",
+          "price": [169],
+          "currency": "SEK",
+          "description": "Sundried tomatoes, basil, vegetables, and parmesan",
+          "type": "chicken",
+          "allergies": ["lactose"]
+        },
+        {
+          "id": 10,
+          "name": "MUSSELS ÁL CAVA",
+          "price": [189,109],
+          "currency": "SEK",
+          "description": "Steamed mussels in a creamy cava sauce, topped with cream fraîche and jalapeños, served with fries and aioli",
+          "type": "seafood",
+          "allergies": ["shellfish", "lactose"]
+        },
+        {
+          "id": 11,
+          "name": "GRILLED BEEF TENDERLOIN",
+          "price": [259],
+          "currency": "SEK",
+          "description": "200 grams beef tenderloin, red wine reduction, fried vegetables, and potato gratin (possible with fries and béarnaise)",
+          "type": "beef",
+          "allergies": ["lactose"]
+        }
+      ]
+    }
+  }

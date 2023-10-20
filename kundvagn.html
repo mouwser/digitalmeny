@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Duck Kundvagn</title>
+    <style href="kundvagn.css"></style>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="kundvagn.css">
+<div class="totalcontent">
+    <div class="grid-header">
+        <h1 id="header">Lucky Duck Cafe & Bar</h1>
+        <img src="/bilder/lucky_duck.png" alt="bild på lucky duck logo">
+    </div>
+
+    <div id="kundvagn">
+
+
+
+
+    </div>
+
+    <div class="grid-footer">
+        <p>&copy; 2023 Lucky Duck</p>
+        <p>Ankvägen 21, norra Ankstaden </p>
+
+
+    </div>
+
+
+
+
+</div>
+<script>
+    // hämtar värdet av query parameter via namn
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // decode och parse på order detaljer från query parametern
+    function getOrderDetails() {
+        const orderParam = getQueryParam('order');
+
+        if (orderParam) {
+            const orderDetails = JSON.parse(decodeURIComponent(orderParam));
+            return orderDetails;
+        } else {
+            return null;
+        }
+    }
+    // hämtar order detaljer
+    const orderDetails = getOrderDetails();
+    const orderDiv = document.getElementById('kundvagn')
+
+
+    // visar order detaljer på sidan
+    if (orderDetails) {
+        const orderList = document.createElement('ul');
+
+        orderDetails.items.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} - ${item.price} ${item.currency}`;
+            if (item.isfullsize == false)  
+            {
+                listItem.textContent = `${item.name} - ${item.price} ${item.currency} (half)`;
+            }
+            orderList.appendChild(listItem);
+        });
+
+        orderDiv.appendChild(orderList);
+
+        const totalElement = document.createElement('p');
+        totalElement.textContent = `Total: ${orderDetails.total} ${orderDetails.items[0].currency}`;
+        orderDiv.appendChild(totalElement);
+    } else {
+        const noOrderMessage = document.createElement('p');
+        noOrderMessage.textContent = 'No order details found.';
+        orderDiv.appendChild(noOrderMessage);
+    }
+</script>
+</body>
+</html>
